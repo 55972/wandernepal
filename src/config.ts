@@ -1116,22 +1116,22 @@ export const footerConfig: FooterConfig = {
   contact: [
     {
       type: "email",
-      label: "hello@wandernepal.com.np",
-      value: "hello@wandernepal.com.np",
-      href: "mailto:hello@wandernepal.com.np"
+      label: "wandernepal@gmail.com",
+      value: "wandernepal@gmail.com",
+      href: "mailto:wandernepal@gmail.com"
     },
     {
       type: "phone",
-      label: "+977 1 4XXXXXX",
-      value: "+977 1 4XXXXXX",
-      href: "tel:+977014XXXXXX"
+      label: "+977 9765507931",
+      value: "+977 9765507931",
+      href: "tel:+9779765507931"
     }
   ],
   locationLabel: "Location",
-  address: ["Thamel, Kathmandu", "Bagmati Province, Nepal"],
+  address: ["pokhara", "Gandaki Province, Nepal"],
   socialLabel: "Follow Us",
   socials: [
-    { platform: "instagram", href: "https://instagram.com/wandernepal" },
+    { platform: "instagram", href: "https://www.instagram.com/wandernepal01?igsh=MTYzdWIwamN4MGhzcw==" },
     { platform: "facebook", href: "https://facebook.com/wandernepal" }
   ],
   logoText: "WanderNepal",
