@@ -1113,7 +1113,7 @@ export interface FooterConfig {
     role: string;
     instagram: string;
     instagramHandle: string;
-  };
+  }[];
 }
 
 export const footerConfig: FooterConfig = {
@@ -1148,13 +1148,22 @@ export const footerConfig: FooterConfig = {
     { platform: "facebook", href: "https://www.facebook.com/share/182YEr1VjH/" }
   ],
   logoText: "WanderNepal",
-  developer: {
-  name: "Bibash Baniya",
-  photo: "/images/developer.jpg",
-  role: "Website Developer", 
-  instagram: "https://www.instagram.com/bibash_baniya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-  instagramHandle: "@bibash_baniya"
-},
+ developers: [
+  {
+    name: "Bibash Baniya",
+    photo: ""/images/aayush.jpg",",
+    role: "Website Developer",
+    instagram: "https://www.instagram.com/bibash_baniya",
+    instagramHandle: "@bibash_baniya"
+  },
+  {
+    name: "Aayush Rijal",
+    photo: "/images/aayush.jpg",
+    role: "Website Developer helper",
+    instagram: "https://www.instagram.com/rijalayushs/?utm_source=ig_web_button_share_sheet",
+    instagramHandle: "@rijalayushs"
+  }
+],
   copyright: "© 2026 WanderNepal.com.np. All rights reserved.",
   links: [
     { label: "Privacy Policy", href: "/privacy" },
