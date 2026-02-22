@@ -32,8 +32,8 @@ export default function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [showDev, setShowDev] = useState(false);
 
-  // Handle scroll effect for navbar
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -42,7 +42,6 @@ export default function Layout() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
@@ -362,7 +361,7 @@ export default function Layout() {
               <p className="text-sm text-kaleo-cream/50">
                 {footerConfig.copyright}
               </p>
-              <div className="flex space-x-6">
+              <div className="flex space-x-6 items-center">
                 {footerConfig.links.map((link, index) => (
                   <Link
                     key={index}
@@ -372,11 +371,53 @@ export default function Layout() {
                     {link.label}
                   </Link>
                 ))}
+                <button
+                  onClick={() => setShowDev(true)}
+                  className="text-sm text-kaleo-cream/50 hover:text-kaleo-terracotta transition-colors"
+                >
+                  Made with ❤️
+                </button>
               </div>
             </div>
           </div>
         </div>
       </footer>
+
+      {/* Developer Modal */}
+      {showDev && (
+        <div
+          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 backdrop-blur-sm"
+          onClick={() => setShowDev(false)}
+        >
+          <div
+            className="bg-kaleo-charcoal border border-kaleo-cream/20 rounded-2xl p-8 text-center shadow-xl max-w-sm w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={footerConfig.developer.photo}
+              alt={footerConfig.developer.name}
+              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-kaleo-terracotta"
+            />
+            <h2 className="font-display text-2xl text-kaleo-cream">{footerConfig.developer.name}</h2>
+            <p className="font-body text-sm text-kaleo-cream/50 mb-4">{footerConfig.developer.role}</p>
+            <a
+              href={footerConfig.developer.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="font-body text-sm text-kaleo-terracotta hover:underline"
+            >
+              {footerConfig.developer.instagramHandle}
+            </a>
+            <br />
+            <button
+              onClick={() => setShowDev(false)}
+              className="mt-6 px-6 py-2 border border-kaleo-cream/20 rounded-full text-xs text-kaleo-cream/50 hover:text-kaleo-cream transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
