@@ -308,7 +308,7 @@ const Footer = () => {
                 <button
                   onClick={() => setShowDev(true)}
                   className="font-body text-xs text-kaleo-cream/40 hover:text-kaleo-terracotta transition-colors"
-                >
+               >
                   Made with ❤️
                 </button>
               </div>
