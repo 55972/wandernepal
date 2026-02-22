@@ -1107,6 +1107,13 @@ export interface FooterConfig {
   logoText: string;
   copyright: string;
   links: { label: string; href: string }[];
+  developer: {
+    name: string;
+    photo: string;
+    role: string;
+    instagram: string;
+    instagramHandle: string;
+  };
 }
 
 export const footerConfig: FooterConfig = {
