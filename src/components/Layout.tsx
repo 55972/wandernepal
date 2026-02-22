@@ -398,21 +398,34 @@ export default function Layout() {
             className="bg-kaleo-charcoal border border-kaleo-cream/20 rounded-2xl p-8 text-center shadow-xl max-w-sm w-full mx-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={footerConfig.developer.photo}
-              alt={footerConfig.developer.name}
-              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-kaleo-terracotta"
-            />
-            <h2 className="font-display text-2xl text-kaleo-cream">{footerConfig.developer.name}</h2>
-            <p className="font-body text-sm text-kaleo-cream/50 mb-4">{footerConfig.developer.role}</p>
-            <a
-              href={footerConfig.developer.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="font-body text-sm text-kaleo-terracotta hover:underline"
-            >
-              {footerConfig.developer.instagramHandle}
-            </a>
+           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+  {footerConfig.developers.map((dev, index) => (
+    <div key={index} className="text-center">
+      <img
+        src={dev.photo}
+        alt={dev.name}
+        className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-kaleo-terracotta"
+      />
+
+      <h2 className="font-display text-xl text-kaleo-cream">
+        {dev.name}
+      </h2>
+
+      <p className="text-sm text-kaleo-cream/50 mb-3">
+        {dev.role}
+      </p>
+
+      <a
+        href={dev.instagram}
+        target="_blank"
+        rel="noreferrer"
+        className="text-sm text-kaleo-terracotta hover:underline"
+      >
+        {dev.instagramHandle}
+      </a>
+    </div>
+  ))}
+</div>
             <br />
             <button
               onClick={() => setShowDev(false)}
