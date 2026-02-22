@@ -84,13 +84,11 @@ const Footer = () => {
 
     if (!section || !image || !content || !logo) return;
 
-    // Set initial states
     gsap.set(content.children, { opacity: 0, y: 30 });
     gsap.set(logo, { opacity: 0, y: 50 });
 
     const triggers: ScrollTrigger[] = [];
 
-    // Content reveal
     const contentTrigger = ScrollTrigger.create({
       trigger: content,
       start: 'top 80%',
@@ -107,7 +105,6 @@ const Footer = () => {
     });
     triggers.push(contentTrigger);
 
-    // Logo reveal
     const logoTrigger = ScrollTrigger.create({
       trigger: logo,
       start: 'top 90%',
@@ -123,7 +120,6 @@ const Footer = () => {
     });
     triggers.push(logoTrigger);
 
-    // Image parallax
     const imageTrigger = ScrollTrigger.create({
       trigger: section,
       start: 'top bottom',
@@ -308,7 +304,7 @@ const Footer = () => {
                 <button
                   onClick={() => setShowDev(true)}
                   className="font-body text-xs text-kaleo-cream/40 hover:text-kaleo-terracotta transition-colors"
-               >
+                >
                   Made with ❤️
                 </button>
               </div>
@@ -317,6 +313,7 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Developer Modal */}
       {showDev && (
         <div
           className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 backdrop-blur-sm"
@@ -333,7 +330,7 @@ const Footer = () => {
             />
             <h2 className="font-display text-2xl text-kaleo-cream">{footerConfig.developer.name}</h2>
             <p className="font-body text-sm text-kaleo-cream/50 mb-4">{footerConfig.developer.role}</p>
-            
+            <a
               href={footerConfig.developer.instagram}
               target="_blank"
               rel="noreferrer"
@@ -352,10 +349,6 @@ const Footer = () => {
         </div>
       )}
     </footer>
-  );
-};
-
-export default Footer;
   );
 };
 
