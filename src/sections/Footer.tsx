@@ -70,6 +70,7 @@ const iconMap: Record<string, typeof Instagram> = {
 };
 
 const Footer = () => {
+  const [showDev, setShowDev] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -298,18 +299,63 @@ const Footer = () => {
               {footerConfig.copyright}
             </p>
             {footerConfig.links.length > 0 && (
-              <div className="flex gap-6">
+              <div className="flex gap-6 items-center">
                 {footerConfig.links.map((link, index) => (
                   <a key={index} href={link.href} className="font-body text-xs text-kaleo-cream/40 hover:text-kaleo-cream transition-colors">
                     {link.label}
                   </a>
                 ))}
+                <button
+                  onClick={() => setShowDev(true)}
+                  className="font-body text-xs text-kaleo-cream/40 hover:text-kaleo-terracotta transition-colors"
+                >
+                  Made with ❤️
+                </button>
               </div>
             )}
           </div>
         </div>
       </div>
+
+      {showDev && (
+        <div
+          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 backdrop-blur-sm"
+          onClick={() => setShowDev(false)}
+        >
+          <div
+            className="bg-kaleo-charcoal border border-kaleo-cream/20 rounded-2xl p-8 text-center shadow-xl max-w-sm w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={footerConfig.developer.photo}
+              alt={footerConfig.developer.name}
+              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-kaleo-terracotta"
+            />
+            <h2 className="font-display text-2xl text-kaleo-cream">{footerConfig.developer.name}</h2>
+            <p className="font-body text-sm text-kaleo-cream/50 mb-4">{footerConfig.developer.role}</p>
+            
+              href={footerConfig.developer.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="font-body text-sm text-kaleo-terracotta hover:underline"
+            >
+              {footerConfig.developer.instagramHandle}
+            </a>
+            <br />
+            <button
+              onClick={() => setShowDev(false)}
+              className="mt-6 px-6 py-2 border border-kaleo-cream/20 rounded-full font-body text-xs text-kaleo-cream/50 hover:text-kaleo-cream transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </footer>
+  );
+};
+
+export default Footer;
   );
 };
 
