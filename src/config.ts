@@ -1154,7 +1154,7 @@ export const footerConfig: FooterConfig = {
   role: "Website Developer", 
   instagram: "https://www.instagram.com/bibash_baniya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   instagramHandle: "@bibash_baniya"
-}
+},
   copyright: "© 2026 WanderNepal.com.np. All rights reserved.",
   links: [
     { label: "Privacy Policy", href: "/privacy" },
