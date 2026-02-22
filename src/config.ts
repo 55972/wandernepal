@@ -1116,15 +1116,20 @@ export const footerConfig: FooterConfig = {
   contact: [
     {
       type: "email",
-      label: "wandernepal@gmail.com",
-      value: "wandernepal@gmail.com",
-      href: "mailto:wandernepal@gmail.com"
+      label: "wandernepal01@gmail.com",
+      value: "wandernepal01@gmail.com",
+      href: "mailto:wandernepal01@gmail.com"
     },
     {
       type: "phone",
       label: "+977 9765507931",
       value: "+977 9765507931",
       href: "tel:+9779765507931"
+      {
+       type: "phone",
+      label: "+977 9844482812",
+      value: "+977 9844482812",
+      href: "tel:+9779844482812"
     }
   ],
   locationLabel: "Location",
@@ -1132,10 +1137,10 @@ export const footerConfig: FooterConfig = {
   socialLabel: "Follow Us",
   socials: [
     { platform: "instagram", href: "https://www.instagram.com/wandernepal01?igsh=MTYzdWIwamN4MGhzcw==" },
-    { platform: "facebook", href: "https://facebook.com/wandernepal" }
+    { platform: "facebook", href: "https://www.facebook.com/share/182YEr1VjH/" }
   ],
   logoText: "WanderNepal",
-  copyright: "© 2024 WanderNepal.com.np. All rights reserved.",
+  copyright: "© 2026 WanderNepal.com.np. All rights reserved.",
   links: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
