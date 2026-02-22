@@ -1151,7 +1151,7 @@ export const footerConfig: FooterConfig = {
  developers: [
   {
     name: "Bibash Baniya",
-    photo: ""/images/aayush.jpg",",
+    photo: ""/images/aayush.jpg",
     role: "Website Developer",
     instagram: "https://www.instagram.com/bibash_baniya",
     instagramHandle: "@bibash_baniya"
