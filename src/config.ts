@@ -1125,7 +1125,8 @@ export const footerConfig: FooterConfig = {
       label: "+977 9765507931",
       value: "+977 9765507931",
       href: "tel:+9779765507931"
-      {
+    },
+    {
        type: "phone",
       label: "+977 9844482812",
       value: "+977 9844482812",
