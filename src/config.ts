@@ -1143,7 +1143,7 @@ export const footerConfig: FooterConfig = {
   logoText: "WanderNepal",
   developer: {
   name: "Bibash Baniya",
-  photo: "public/images/developer.jpg",
+  photo: "/images/developer.jpg",
   role: "Website Developer", 
   instagram: "https://www.instagram.com/bibash_baniya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   instagramHandle: "@bibash_baniya"
